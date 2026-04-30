@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="max-width: 500px; margin: 50px auto; padding: 20px; background: white; border-radius: 10px;">
+            <h1>Your Order</h1>
+            <hr>
+            <div id="cart-list"></div> <!-- Items will appear here -->
+            <hr>
+            <h3>Total: $<span id="grand-total">0.00</span></h3>
+            <button onclick="processOrder()" class="add-btn">Place Order (COD/UPI)</button>
+            <br><br>
+            <a href="index.html">← Back to Menu</a>
+        </div>
+    </div>
+
+    <script>
+        // 1. Load Data
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const list = document.getElementById('cart-list');
+        let total = 0;
+
+        // 2. Show Data
+        if (cart.length === 0) {
+            list.innerHTML = "<p>Your cart is empty!</p>";
+        } else {
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                list.innerHTML += `<p><strong>${item.name}</strong> x ${item.quantity} = $${subtotal.toFixed(2)}</p>`;
+            });
+        }
+        document.getElementById('grand-total').innerText = total.toFixed(2);
+
+        // 3. Move to Success Page
+        function processOrder() {
+            if (cart.length === 0) return alert("Cart is empty!");
+            localStorage.setItem("lastOrderTotal", total.toFixed(2));
+            localStorage.removeItem("cart"); // Empty the cart
+            window.location.href = "order-success";
+        }
+    </script>
+</body>
+</html>

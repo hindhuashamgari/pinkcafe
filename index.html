@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Cafe | Bakery & Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🥐 Pink Cafe</div>
+        <div class="search-container">
+            <input type="text" id="menuSearch" placeholder="Search menu..." onkeyup="filterMenu()">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#bakery">Bakery</a></li>
+            <li><a href="#cold-drinks">Cold</a></li>
+            <li><a href="#hot-drinks">Hot</a></li>
+            <li><a href="cart.html" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+    <!-- BAKERY SECTION (7 ITEMS) -->
+    <h2>Fresh Bakery</h2>
+    <div class="grid" id="bakery">
+        <div class="menu-item">
+            <img src="image/croissant.jpg.jpg" alt="Croissant">
+            <h3>Butter Croissant</h3>
+            <p>$3.50</p>
+            <button class="add-btn" data-name="Butter Croissant" data-price="3.50">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/baguette.jpg.jpg" alt="Baguette">
+            <h3>Fresh Baguette</h3>
+            <p>$4.00</p>
+            <button class="add-btn" data-name="Fresh Baguette" data-price="4.00">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/cookie.jpg.jpg" alt="Cookie">
+            <h3>Choco Chip Cookie</h3>
+            <p>$2.50</p>
+            <button class="add-btn" data-name="Choco Chip Cookie" data-price="2.50">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/blueberrymuffin.jpg.jpg" alt="Muffin">
+            <h3>Blueberry Muffin</h3>
+            <p>$3.75</p>
+            <button class="add-btn" data-name="Blueberry Muffin" data-price="3.75">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/cheesecake;jpg.jpg" alt="Cheesecake">
+            <h3>Cheesecake Slice</h3>
+            <p>$6.00</p>
+            <button class="add-btn" data-name="Cheesecake Slice" data-price="6.00">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/bagel.jpg.jpg" alt="Bagel">
+            <h3>Plain Bagel</h3>
+            <p>$3.00</p>
+            <button class="add-btn" data-name="Plain Bagel" data-price="3.00">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/donut.jpg.jpg" alt="Donut">
+            <h3>Gluten-Free Donut</h3>
+            <p>$3.50</p>
+            <button class="add-btn" data-name="Gluten-Free Donut" data-price="3.50">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- COLD DRINKS (5 ITEMS) -->
+    <h2>Cold Drinks</h2>
+    <div class="grid" id="cold-drinks">
+        <div class="menu-item">
+            <img src="image/americano.jpg.jpg" alt="Iced Coffee">
+            <h3>Iced Americano</h3>
+            <p>$4.50</p>
+            <button class="add-btn" data-name="Iced Americano" data-price="4.50">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/peach.jpg.jpg" alt="Iced Tea">
+            <h3>Peach Iced Tea</h3>
+            <p>$4.00</p>
+            <button class="add-btn" data-name="Peach Iced Tea" data-price="4.00">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/icedmatcha.jpg.jpg" alt="Matcha">
+            <h3>Classic Matcha</h3>
+            <p>$3.50</p>
+            <button class="add-btn" data-name="Classic Matcha" data-price="3.50">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/strawberrysmoothie,jpg.jpg" alt="Smoothie">
+            <h3>Strawberry Smoothie</h3>
+            <p>$5.50</p>
+            <button class="add-btn" data-name="Strawberry Smoothie" data-price="5.50">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/icedlatte.jpg.jpg" alt="Iced Latte">
+            <h3>Iced Latte</h3>
+            <p>$5.00</p>
+            <button class="add-btn" data-name="Iced Latte" data-price="5.00">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- HOT DRINKS (5 ITEMS) -->
+    <h2>Hot Drinks</h2>
+    <div class="grid" id="hot-drinks">
+        <div class="menu-item">
+            <img src="image/capuccino.jpg.jpg" alt="Flat White">
+            <h3>Capuccino</h3>
+            <p>$4.50</p>
+            <button class="add-btn" data-name="Capuccino" data-price="4.50">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/hotchocolate.j[g.jpg" alt="Hot Cocoa">
+            <h3>Hot Cocoa</h3>
+            <p>$4.00</p>
+            <button class="add-btn" data-name="Hot Cocoa" data-price="4.00">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/matcha.jpg.jpg" alt="Matcha">
+            <h3>Matcha Latte</h3>
+            <p>$5.25</p>
+            <button class="add-btn" data-name="Matcha Latte" data-price="5.25">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/icedtea.jpg.jpg" alt="Earl Grey">
+            <h3>Earl Grey Tea</h3>
+            <p>$3.00</p>
+            <button class="add-btn" data-name="Earl Grey Tea" data-price="3.00">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <img src="image/latte.jpg.jpg" alt="Latte">
+            <h3>Vanilla Latte</h3>
+            <p>$4.75</p>
+            <button class="add-btn" data-name="Vanilla Latte" data-price="4.75">Add to Cart</button>
+        </div>
+    </div>
+</main>
+
+
+</body>
+</html>
