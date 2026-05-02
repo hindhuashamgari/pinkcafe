@@ -30,5 +30,11 @@
         const amount = localStorage.getItem("lastOrderTotal") || "0.00";
         document.getElementById('final-amount').innerText = amount;
     </script>
+    <script>
+   // This removes the cart items from the browser's memory
+   localStorage.removeItem('cart'); 
+   // If your cart uses a different name, like 'cartItems', use that instead.
+</script>
+
 </body>
 </html>
